@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { checkout } from '../checkout'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -23,7 +24,14 @@ export default function Home() {
             <h2>Nike Shoes</h2>
             <p>Best Nike shoes.</p>
             <button onClick={() => {
-
+              checkout({
+                lineItems: [
+                  {
+                    price: "price_1LzvoiSDmyMtTThlof4pVwil", // price API id
+                    quantity: 1
+                  }
+                ]
+              })
             }}>Buy</button>
           </div>
 
@@ -31,7 +39,16 @@ export default function Home() {
             <img src='assests/niketshirt.jpeg' width={200} height={300} />
             <h2>Nike T-shirt</h2>
             <p>Best Nike t-shirt.</p>
-            <button>Buy</button>
+            <button onClick={() => {
+              checkout({
+                lineItems: [
+                  {
+                    price: "price_1LzvpqSDmyMtTThlMVz4MuvQ", // price API id
+                    quantity: 1
+                  }
+                ]
+              })
+            }}>Buy</button>
           </div>
 
         </div>
