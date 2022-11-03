@@ -23,6 +23,7 @@ export default function Home() {
             <img src='assests/nikeshoes.jpeg' width={200} height={300} />
             <h2>Nike Shoes</h2>
             <p>Best Nike shoes.</p>
+            <p>Price: <strong>2999</strong> <strong style={{ color: 'red', fontSize: 'small', marginLeft: '10px' }}>50% Off</strong></p>
             <button onClick={() => {
               checkout({
                 lineItems: [
@@ -39,6 +40,7 @@ export default function Home() {
             <img src='assests/niketshirt.jpeg' width={200} height={300} />
             <h2>Nike T-shirt</h2>
             <p>Best Nike t-shirt.</p>
+            <p>Price: <strong>999</strong> <strong style={{ color: 'red', fontSize: 'small', marginLeft: '10px' }}>27% Off</strong></p>
             <button onClick={() => {
               checkout({
                 lineItems: [
